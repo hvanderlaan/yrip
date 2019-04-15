@@ -63,9 +63,11 @@ def main():
             sys.exit(1)
 
     youtube.display(results)
+    print('')
     downloadnum = input('please select a number to download: ')
+    print('')
 
-    if downloadnum >= 1:
+    if int(downloadnum) >= 1:
         downloadurl = list(results.values())[int(downloadnum) - 1]
         youtube.download(downloadurl)
     else:
